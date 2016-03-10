@@ -16,4 +16,4 @@ If you want to be fancy and install this utility on your system, you can do
 something like:
 
     $ sudo cp ldif2csv.py /usr/local/bin/ldif2csv
-    $ sudo chmod +x `which ldif2csv`
+    $ sudo chmod +x /usr/local/bin/ldif2csv
