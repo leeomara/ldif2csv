@@ -30,7 +30,7 @@ class LDIF(LDIFParser):
         """
         simplified = {}
         for attr, vals in entry.items():
-            simplified[attr.lower()] = ', '.join(vals)
+            simplified[attr.lower()] = b', '.join(vals)
             attributes.add(attr.lower())
         records.append(simplified)
 
@@ -63,6 +63,6 @@ for record in records:
     pruned = {}
     for field in csv_fields:
         if field in record:
-            pruned[field] = record[field]
+            pruned[field] = record[field].decode()
     if len(pruned):
         writer.writerow(pruned)
